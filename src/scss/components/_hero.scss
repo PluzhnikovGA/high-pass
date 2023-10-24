@@ -1,0 +1,237 @@
+@import "../vars";
+
+.hero {
+
+  padding: 41px 0 68px;
+  background-color: #fff;
+
+  @include tablet{
+    padding: 34px 0 68px;
+  }
+
+  @include between-t-st {
+    padding-top: 78px;
+  }
+
+  @include small-tablet {
+    padding-top: 82px;
+  }
+
+  @include mobile {
+    padding: 75px 0 50px;
+  }
+
+  &__container {
+    gap: $gridGutter;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 35px;
+    }
+  }
+
+  &__left,
+  &__right {
+    width: calc(630 / 1290 * 100%);
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__left {
+    position: relative;
+    font-size: 0;
+  }
+
+}
+
+.left {
+
+  &__image {
+    height: 100%;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    bottom: 60px;
+    left: 60px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @include tablet {
+      bottom: 30px;
+      left: 30px;
+    }
+
+    @include mobile {
+      top: 6px;
+      right: 5px;
+    }
+  }
+
+}
+
+.content {
+
+  &__tag {
+    align-self: flex-end;
+    margin-bottom: auto;
+    padding: 7px 15px;
+    background-color: #202020;
+
+    @include mobile {
+      padding: 4px 7px;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 3px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+
+    @include tablet {
+      margin-bottom: 9px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 14px;
+    }
+
+    @include mobile {
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+  }
+
+  &__title {
+    max-width: 427px;
+    margin-bottom: 19px;
+    font-family: $TTFirsNeue;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 37px;
+    color: #fff;
+
+    @include tablet {
+      margin-bottom: 22px;
+      font-size: 34px;
+      line-height: 34px;
+    }
+
+    @include small-tablet {
+      line-height: 31px;
+    }
+
+    @include mobile {
+      max-width: 169px;
+      margin-bottom: 15px;
+      font-size: 24px;
+      line-height: 26px;
+    }
+
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 12px 19px;
+    border: 3px solid #ff6e30;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+    background-color: #ff6e30;
+    outline: none;
+    transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
+
+    @include mobile {
+      padding: 7px 12px;
+    }
+  }
+
+  &__link:focus {
+    border-color: #ce4307;
+  }
+
+  &__link:hover {
+    border-color: #bc572b;
+    background-color: #bc572b;
+  }
+
+  &__link:active {
+    border-color: #ce4307;
+    background-color: #ce4307;
+  }
+}
+
+.right {
+
+  &__title-hero {
+    margin-bottom: 18px;
+    font-family: $TTFirsNeue;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 104%;
+    color: #202020;
+
+    @include tablet {
+      margin-bottom: 25px;
+    }
+
+    @include small-tablet {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 19px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 300px 257px;
+    gap: $gridGutter;
+
+    @include tablet {
+      grid-template-rows: 332px 186px;
+    }
+
+    @include small-tablet {
+      grid-template-rows: 228px 133px;
+    }
+
+    @include mobile {
+      grid-template-rows: minmax(186px, calc(186fr / 105)) minmax(105px, 1fr);
+    }
+
+  }
+
+  &__item {
+    font-size: 0;
+  }
+
+  &__item:nth-child(1) {
+    grid-column: 1 / span 2;
+  }
+
+  &__image {
+    height: 100%;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}

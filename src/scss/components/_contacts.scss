@@ -1,0 +1,345 @@
+@import "../vars";
+
+.contacts {
+  padding: 34px 0 68px;
+  background-color: #fff;
+
+  @include mobile {
+    padding: 17px 0 50px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+
+    @include mobile {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__content {
+
+    @include small-tablet {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      position: relative;
+      padding-top: 496px;
+    }
+  }
+
+  &__left {
+    position: relative;
+    width: calc(850 / 1290 * 100%);
+    margin-right: $gridGutter;
+    padding-top: 6px;
+
+    @include tablet {
+      width: calc(590 / 962 * 100%);
+    }
+
+    @include small-tablet {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    @include mobile {
+      position: absolute;
+      top: 0;
+      right: -21px;
+      left: -21px;
+      width: auto;
+      height: 473px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__right {
+    width: calc(410 / 1290 * 100%);
+
+    @include tablet {
+      width: calc(342 / 962 * 100%);
+    }
+
+    @include small-tablet {
+      width: 100%;
+      max-width: 466px;
+    }
+  }
+
+  &__data {
+    position: absolute;
+    top: 6px;
+    bottom: 0;
+    left: 0;
+    width: calc(410 / 850 * 100%);
+    padding: 175px 50px 50px 60px;
+    background-color: rgba(32, 32, 32, 0.85);
+
+    @include tablet {
+      top: auto;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 157px;
+      padding: 25px 50px 23px 30px;
+    }
+
+    @include mobile {
+      width: auto;
+      padding: 26px 35px 23px 19px;
+    }
+
+  }
+
+}
+
+.map {
+  width: 100%;
+  height: 460px;
+}
+
+.data {
+
+  &__btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    color: #fff;
+
+    @include mobile {
+      margin-bottom: 11px;
+    }
+
+  }
+
+}
+
+.title-contact {
+  font-family: $TTFirsNeue;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 22px;
+
+  @include mobile {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+}
+
+.address {
+
+  &__street {
+    margin-bottom: 3px;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: #cacaca;
+
+    @include tablet {
+      max-width: 293px;
+    }
+
+    @include small-tablet {
+      max-width: 436px;
+      margin-bottom: 4px;
+    }
+
+    @include mobile {
+      margin-bottom: 11px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+  }
+
+  &__phone {
+    padding-left: 22px;
+    font-family: $TTFirsNeue;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #ff6e30;
+    background-image: url("../img/mdi_call.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include tablet {
+      position: absolute;
+      top: 112px;
+      left: 178px;
+    }
+
+    @include small-tablet {
+      position: relative;
+      top: auto;
+      left: auto;
+    }
+
+    @include mobile {
+      padding-left: 19px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+  }
+
+}
+
+.right {
+
+  &__title {
+    margin-bottom: 5px;
+
+    @include mobile {
+      margin-bottom: 8px;
+    }
+
+  }
+
+  &__descr {
+    margin-bottom: 14px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #999;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+}
+
+.form {
+
+  &__label-contact {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__text-contact {
+    width: 100%;
+    height: 100%;
+    padding: 14px 21px 15px;
+    border: 1px solid #e9e9e9;
+    font-size: 16px;
+    line-height: 19px;
+    color: #202020;
+    caret-color: transparent;
+    background-color: #e9e9e9;
+    outline: none;
+    transition: border-color .3s ease-in-out;
+
+    @include mobile {
+      padding: 12px 22px 10px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+  }
+
+  &__cell {
+    height: 150px;
+    margin-bottom: 17px;
+
+    @include tablet {
+      margin-bottom: 15px;
+    }
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__text-contact::placeholder {
+    color: #999;
+    transition: color .3s ease-in-out;
+  }
+
+  &__text-contact:focus {
+    border-color: #ff6e30;
+  }
+
+  &__text-contact:hover::placeholder {
+    color: #ff6e30;
+  }
+
+  &__text-contact:hover  {
+    border-color: #e9e9e9;
+  }
+
+  &__btn {
+    padding: 12px 19px;
+    border: 3px solid #ff6e30;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+    background-color: #ff6e30;
+    transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
+
+    @include small-tablet {
+      padding: 13px 20px;
+    }
+
+    @include mobile {
+      padding: 9px 19px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+  }
+
+  &__btn:focus {
+    border-color: #ce4307;
+  }
+
+  &__btn:hover {
+    border-color: #bc572b;
+    background-color: #bc572b;
+  }
+
+  &__btn:active {
+    border-color: #ce4307;
+    background-color: #ce4307;
+  }
+
+}
+
+.is-invalid-registretion,
+.is-invalid-registretion:focus {
+  border-color: #ff3030;
+}
+
+.error-registretion {
+  position: absolute;
+  top: 3px;
+  left: 23px;
+  right: auto;
+}
+
+[class*="copyright"] {
+  display: none;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1)
+}

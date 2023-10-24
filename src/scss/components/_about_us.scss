@@ -1,0 +1,233 @@
+@import "../vars";
+
+.about-us {
+  padding: 30px 0 70px;
+  background-color: #202020;
+
+  @include tablet {
+    padding: 30px 0 82px;
+  }
+
+  @include small-tablet {
+    padding: 30px 0 62px;
+  }
+
+  @include mobile {
+    padding: 32px 0 61px;
+  }
+
+  &__title {
+    margin-bottom: 2px;
+    color: #fff;
+
+    @include small-tablet {
+      margin-bottom: -6px;
+    }
+
+    @include mobile {
+      margin-bottom: 6px;
+      font-size: 18px;
+      line-height: 23px;
+    }
+  }
+
+  &__content {
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__left,
+  &__right {
+    width: calc(630 / 1290 * 100%);
+
+    @include tablet {
+      width: calc(466 / 962 * 100%);
+    }
+
+    @include small-tablet {
+      width: calc(342 / 714 * 100%);
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__left {
+    @include mobile {
+      margin-bottom: 21px;
+    }
+  }
+
+  &__descr {
+    padding-top: 3px;
+    font-size: 16px;
+    line-height: 175%;
+    color: #fff;
+
+    @include tablet {
+      padding-top: 0;
+    }
+
+    @include small-tablet {
+      padding-top: 11px;
+    }
+
+    @include mobile {
+      padding-top: 0;
+      font-size: 14px;
+      line-height: 25px;
+    }
+
+  }
+
+  &__picture {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    @include mobile {
+      width: 100%;
+      margin-bottom: 22px;
+    }
+  }
+
+  &__image {
+
+    @include mobile {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__post-title {
+    margin-bottom: 16px;
+    font-family: $TTFirsNeue;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 92%;
+    color: #fff;
+
+    @include mobile {
+      margin-bottom: 14px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+  }
+
+  &__form {
+    width: 100%;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    padding: 12px 19px;
+    border: 3px solid #ff6e30;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+    background-color: #ff6e30;
+    transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
+
+    @include mobile {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__btn:focus {
+    border-color: #ce4307;
+  }
+
+  &__btn:hover {
+    border-color: #bc572b;
+    background-color: #bc572b;
+  }
+
+  &__btn:active {
+    border-color: #ce4307;
+    background-color: #ce4307;
+  }
+
+}
+
+.form {
+
+  &__label {
+    position: relative;
+    width: calc(474 / 630 * 100%);
+    margin-right: 31px;
+
+    @include tablet {
+      width: calc(342 / 466* 100%);
+      margin-right: 0;
+      margin-bottom: 21px;
+    }
+
+    @include small-tablet {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 14px 21px;
+    border: 1px solid #4a4a4a;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+    caret-color: transparent;
+    background-color: #4a4a4a;
+    outline: none;
+    transition: border-color .3 ease-in-out;
+
+    @include mobile {
+      padding: 11px 22px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__text::placeholder {
+    color: #cacaca;
+    transition: color .3s ease-in-out;
+  }
+
+  &__text:focus {
+    border-color: #ff6e30;
+  }
+
+  &__text:hover {
+    border-color: #4a4a4a;
+  }
+
+  &__text:hover::placeholder {
+    color: #ff6e30;
+  }
+
+}
+
+.is-invalid-subscription,
+.is-invalid-subscription:focus {
+  border-color: #f06666;
+}
+
+.error-subscription {
+  position: absolute;
+  top: 3px;
+  left: 23px;
+}
